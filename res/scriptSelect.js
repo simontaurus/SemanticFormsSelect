@@ -235,7 +235,8 @@ function SFSelect_arrayEqual(a, b) {
         var select2enabled = false;
         var name = src.name;
 
-        if (typeof selectElement.select2 === "function") { 
+        //if (typeof selectElement.select2 === "function") { 
+	if (!selectElement.hasClass( "sfs-input" ) && typeof selectElement.select2 === "function") {
             // safe to use the function
 
             var select2Data = selectElement.select2('data');
