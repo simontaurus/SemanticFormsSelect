@@ -255,7 +255,7 @@ class SelectFieldTest extends \PHPUnit_Framework_TestCase {
 		$this->parser = $GLOBALS['wgParser'];
 		$this->parser->setTitle( Title::newFromText( 'NO TITLE' ) );
 		$this->parser->mOptions = new ParserOptions();
-		$this->parser->resetOutput();
+		$this->parser->mOutput = new ParserOutput();
 		$this->parser->clearState();
 		$this->SelectField = new SelectField( $this->parser );
 	}
