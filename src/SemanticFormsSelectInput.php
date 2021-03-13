@@ -75,7 +75,6 @@ class SemanticFormsSelectInput extends PFFormInput {
 	 * @return string
 	 */
 	public function getHTML( $cur_value = "", $input_name = "", $is_mandatory, $is_disabled, Array $other_args ) {
-
 		global $wgPageFormsFieldNum, $wgUser;
 
 		// shortcut to the SelectField object
@@ -230,8 +229,6 @@ class SemanticFormsSelectInput extends PFFormInput {
 		}
 
 		$ret .= "</select></span>";
-		//$ret .= "<span id=\"info_$sfgFieldNum\" class=\"errorMessage\"></span>";
-		//FIX: Replace $sfgFieldNum with $wgPageFormsFieldNum
 		$ret .= "<span id=\"info_$wgPageFormsFieldNum\" class=\"errorMessage\"></span>";
 
 		if ( $other_args["is_list"] ) {
