@@ -255,6 +255,7 @@ function SFSelect_arrayEqual(a, b) {
                     // Combobox
                     // lookup values in wgPageFormsAutocompleteValues
                     if (selectElement.hasClass('pfComboBox')) {
+
                         var autocompletesettings = selectElement.attr('autocompletesettings');
                         if (autocompletesettings !== null) {
                             // In case of initial page load and label is used, select2Data.id holds a value
@@ -485,6 +486,12 @@ function SFSelect_arrayEqual(a, b) {
         }
         objs.trigger("change");
     }
+
+    //Force reload of dependant field if fields are preloaded with values
+    $('select.pfComboBox, select.pfTokens').each(function() {
+	    $(this).trigger('change')
+    });
+
 
 //}( jQuery, mediaWiki ) );
 }(jQuery) );
