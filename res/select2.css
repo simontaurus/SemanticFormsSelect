@@ -33,7 +33,7 @@ span.select-sfs select {
 	-moz-appearance: none;
 	appearance: none;
 	display: inline-block;
-	min-width: 450px !important;
+	min-width: 450px;
 }
 
 span.select-sfs select:not([multiple]) {
