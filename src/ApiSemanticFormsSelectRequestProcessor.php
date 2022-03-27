@@ -96,7 +96,7 @@ class ApiSemanticFormsSelectRequestProcessor {
 		$result = QueryProcessor::getResultFromQuery( $query, $params, SMW_OUTPUT_WIKI, QueryProcessor::INLINE_QUERY );
 		
 		
-		$values = $this->getFormattedValuesFrom( $sep, $result );
+		$values = $this->getFormattedValuesFrom( ",", $result ); //sep of result is always ',' -> bug?
 
 		return json_encode( [
 			"values" => $values,
