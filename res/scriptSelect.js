@@ -488,7 +488,7 @@ function SFSelect_arrayEqual(a, b) {
     }
 
     //Force reload of dependant field if fields are preloaded with values
-    $('select.pfComboBox, select.pfTokens').each(function() {
+    $('select.pfComboBox, select.pfTokens, select.sfs-input').each(function() {
 	    $(this).trigger('change')
     });
 
