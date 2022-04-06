@@ -125,6 +125,7 @@ class SemanticFormsSelectInput extends PFFormInput {
 		}
 
 		$classes = [];
+                $classes[] = "sfs-input"; // default class
 		if ( $is_mandatory ) {
 			$classes[] = "mandatoryField";
 		}
@@ -145,7 +146,7 @@ class SemanticFormsSelectInput extends PFFormInput {
 
 		$spanextra = $is_mandatory ? 'mandatoryFieldSpan' : '';
 		$is_single_select = (!$is_list) ? 'select-sfs-single' : '' ;
-		$ret = "<span class=\"inputSpan select-sfs $is_single_select $spanextra\"><select class='sfs-input'  name='$inname' id='input_$wgPageFormsFieldNum' $extraatt>";
+		$ret = "<span class=\"inputSpan select-sfs $is_single_select $spanextra\"><select name='$inname' id='input_$wgPageFormsFieldNum' $extraatt>";
 
 
 		$curvalues = null;
